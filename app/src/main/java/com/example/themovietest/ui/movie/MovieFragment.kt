@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import com.example.themovietest.R
 import com.example.themovietest.data.model.Movie
-import com.example.themovietest.data.remote.MovieDataSource
+import com.example.themovietest.data.remote.RemoteMovieDataSource
 import com.example.themovietest.databinding.FragmentMovieBinding
 import com.example.themovietest.presentation.MovieViewModel
 import com.example.themovietest.presentation.MovieViewModelFactory
@@ -26,7 +26,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
-                MovieDataSource(RetrofitClient.webservice)
+                RemoteMovieDataSource(RetrofitClient.webservice)
             )
         )
     }
