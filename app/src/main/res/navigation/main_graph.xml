@@ -44,4 +44,14 @@
             android:name="voteCount"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/photoUserFragment"
+        android:name="com.example.themovietest.ui.photoUser.photoUserFragment"
+        android:label="fragment_photo_user"
+        tools:layout="@layout/fragment_photo_user" />
+    <fragment
+        android:id="@+id/locationUserFragment"
+        android:name="com.example.themovietest.ui.location.LocationUserFragment"
+        android:label="fragment_location_user"
+        tools:layout="@layout/fragment_location_user" />
 </navigation>
