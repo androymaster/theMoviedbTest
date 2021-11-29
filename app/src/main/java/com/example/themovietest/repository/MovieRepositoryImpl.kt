@@ -1,5 +1,6 @@
 package com.example.themovietest.repository
 
+import com.example.themovietest.core.InternetCheck
 import com.example.themovietest.data.local.LocalMovieDataSource
 import com.example.themovietest.data.model.MovieList
 import com.example.themovietest.data.model.toMovieEntity
@@ -11,16 +12,24 @@ class MovieRepositoryImpl(
 ) : MovieRepository {
 
     override suspend fun getNowPlayingMovies(): MovieList {
-        dataSourceRemote.getNowPlayingMovies().results.forEach { movie ->
-            dataSourceLocal.saveMovie(movie.toMovieEntity("now_playing"))
+        return if (InternetCheck.isNetworkAvailable()) {
+            dataSourceRemote.getNowPlayingMovies().results.forEach { movie ->
+                dataSourceLocal.saveMovie(movie.toMovieEntity("now_playing"))
+            }
+            dataSourceLocal.getNowPlayingMovies()
+        } else {
+            dataSourceLocal.getNowPlayingMovies()
         }
-        return dataSourceLocal.getNowPlayingMovies()
     }
 
     override suspend fun getUpcomingMovies(): MovieList {
-        dataSourceRemote.getUpcomingMovies().results.forEach{ movie ->
-            dataSourceLocal.saveMovie(movie.toMovieEntity("upcoming"))
+        return if (InternetCheck.isNetworkAvailable()) {
+            dataSourceRemote.getUpcomingMovies().results.forEach { movie ->
+                dataSourceLocal.saveMovie(movie.toMovieEntity("upcoming"))
+            }
+            dataSourceLocal.getUpcomingMovies()
+        } else {
+            dataSourceLocal.getUpcomingMovies()
         }
-        return dataSourceLocal.getUpcomingMovies()
     }
 }
