@@ -31,7 +31,7 @@ class PhotoListAdapter(private val images: List<ImageList>) :
     ):BaseViewHolder<ImageList>(binding.root){
         override fun bind(item: ImageList) {
             binding.imageTimestamp.text = "Hace 2 horas"
-            Glide.with(context).load(item.photo_user_image).centerCrop().into(binding.imageUser)
+            Glide.with(context).load(item.imageUrl).centerCrop().into(binding.imageUser)
         }
     }
 }

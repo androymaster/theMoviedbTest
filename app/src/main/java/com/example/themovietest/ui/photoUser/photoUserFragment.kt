@@ -17,6 +17,7 @@ import androidx.navigation.Navigation
 import com.example.themovietest.R
 import com.example.themovietest.databinding.FragmentMovieBinding
 import com.example.themovietest.databinding.FragmentPhotoUserBinding
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import java.io.ByteArrayOutputStream
 import java.util.*
@@ -76,6 +77,8 @@ class photoUserFragment : Fragment(R.layout.fragment_photo_user) {
         }.addOnCompleteListener { task ->
            if (task.isSuccessful){
                val downloadUrl = task.result.toString()
+               FirebaseFirestore.getInstance().collection("Imagenes").document("new_image").update(
+                   mapOf("imageUrl" to downloadUrl))
                Log.d("Storage", "uploadPictureURL: $downloadUrl")
            }
         }
