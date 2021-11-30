@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.example.themovietest.R
 import com.example.themovietest.databinding.FragmentMovieBinding
 import com.example.themovietest.databinding.FragmentPhotoUserBinding
@@ -34,8 +35,8 @@ class photoUserFragment : Fragment(R.layout.fragment_photo_user) {
             dispatchTakePictureIntent()
         }
 
-        binding.btnViewPhotos.setOnClickListener {
-
+        binding.btnViewPhotos.setOnClickListener { v ->
+            Navigation.findNavController(v).navigate(R.id.action_photoUserFragment_to_photoListFragment)
         }
     }
 

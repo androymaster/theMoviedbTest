@@ -20,7 +20,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 class LocationUserFragment : Fragment(R.layout.fragment_location_user) {
 
     private lateinit var binding: FragmentLocationUserBinding
-    private lateinit var map: GoogleMap
     private val db = FirebaseFirestore.getInstance()
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
