@@ -33,6 +33,10 @@ class photoUserFragment : Fragment(R.layout.fragment_photo_user) {
         binding.btnTakePicture.setOnClickListener {
             dispatchTakePictureIntent()
         }
+
+        binding.btnViewPhotos.setOnClickListener {
+
+        }
     }
 
     private fun dispatchTakePictureIntent(){

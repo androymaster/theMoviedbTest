@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/fragment_location_maps.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/fragment_location_user.xml" value="0.25" />
+        <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/fragment_movie_detail.xml" value="0.25" />
+        <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/fragment_photo_list.xml" value="0.25" />
         <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/fragment_photo_user.xml" value="0.22592592592592592" />
+        <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/layout/images_item_view.xml" value="0.25" />
         <entry key="..\:/Users/on_ho/Downloads/TheMovieTest-master/TheMovieTest-master/app/src/main/res/menu/menu_main.xml" value="0.25" />
       </map>
     </option>

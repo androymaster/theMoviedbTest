@@ -15,4 +15,8 @@
     <string name="action_photos">Fotos</string>
     <string name="action_maps">Ubicación</string>
     <string name="action_movies">Peliculas</string>
+    <string name="btn_txt_view">Ver fotos de firebase</string>
+    <string name="action_location">obtener ubicación actual</string>
+    <string name="action_view_map">Ver en el mapa</string>
+    <string name="title_location">Obten tu ubicación para ver donde te encuentras</string>
 </resources>
